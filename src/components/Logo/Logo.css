@@ -1,0 +1,11 @@
+.Tilt {
+    background: #005AA7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFDE4, #005AA7); 
+}
+
+.logo-box {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
