@@ -15,7 +15,7 @@ import "./App.css";
 const initialState = {
   input: "",
   imageUrl: "",
-  box: {},
+  boxArray: [{}],
   route: "signin",
   isSignedIn: false,
   user: {
@@ -45,9 +45,9 @@ class App extends Component {
     });
   };
 
-  calculateFaceLocation = (data) => {
+  calculateFaceLocation = (data, i) => {
     const ClarifaiFace =
-      data.outputs[0].data.regions[0].region_info.bounding_box;
+      data.outputs[0].data.regions[i].region_info.bounding_box;
     const image = document.getElementById("input-image");
     const width = Number(image.width);
     const height = Number(image.height);
@@ -60,7 +60,8 @@ class App extends Component {
   };
 
   displayFaceBox = (box) => {
-    this.setState({ box: box });
+    let newBoxArray = this.state.boxArray.concat(box);
+    this.setState({ boxArray: newBoxArray });
   };
 
   onInputChange = (event) => {
@@ -93,7 +94,10 @@ class App extends Component {
             .catch(console.log)
 
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
+        let i = 0;
+        for (i = 0; i < response.outputs[0].data.regions.length; i++){
+          this.displayFaceBox(this.calculateFaceLocation(response, i));
+        }   
       })
       .catch(err => console.log(err));
   }
@@ -108,7 +112,7 @@ class App extends Component {
   };
 
   render() {
-    const { isSignedIn, imageUrl, route, box } = this.state;
+    const { isSignedIn, imageUrl, route, boxArray } = this.state;
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
@@ -128,7 +132,7 @@ class App extends Component {
               onInputChange={this.onInputChange}
               onButtonSubmit={this.onButtonSubmit}
             />
-            <FaceRecognition box={box} imageUrl={imageUrl} />
+            <FaceRecognition boxArray={boxArray} imageUrl={imageUrl} />
           </div>
         ) : route === "signin" ? (
           <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
