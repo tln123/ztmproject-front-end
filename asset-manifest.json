@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ztmproject-front-end/static/css/main.80736105.chunk.css",
-    "main.js": "/ztmproject-front-end/static/js/main.0bef2ae2.chunk.js",
-    "main.js.map": "/ztmproject-front-end/static/js/main.0bef2ae2.chunk.js.map",
+    "main.css": "/ztmproject-front-end/static/css/main.834cbe97.chunk.css",
+    "main.js": "/ztmproject-front-end/static/js/main.8f8ec56e.chunk.js",
+    "main.js.map": "/ztmproject-front-end/static/js/main.8f8ec56e.chunk.js.map",
     "runtime-main.js": "/ztmproject-front-end/static/js/runtime-main.906e46c2.js",
     "runtime-main.js.map": "/ztmproject-front-end/static/js/runtime-main.906e46c2.js.map",
     "static/css/2.31461e4f.chunk.css": "/ztmproject-front-end/static/css/2.31461e4f.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.6eba715d.chunk.js.map": "/ztmproject-front-end/static/js/3.6eba715d.chunk.js.map",
     "index.html": "/ztmproject-front-end/index.html",
     "static/css/2.31461e4f.chunk.css.map": "/ztmproject-front-end/static/css/2.31461e4f.chunk.css.map",
-    "static/css/main.80736105.chunk.css.map": "/ztmproject-front-end/static/css/main.80736105.chunk.css.map",
+    "static/css/main.834cbe97.chunk.css.map": "/ztmproject-front-end/static/css/main.834cbe97.chunk.css.map",
     "static/js/2.28e12941.chunk.js.LICENSE.txt": "/ztmproject-front-end/static/js/2.28e12941.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.906e46c2.js",
     "static/css/2.31461e4f.chunk.css",
     "static/js/2.28e12941.chunk.js",
-    "static/css/main.80736105.chunk.css",
-    "static/js/main.0bef2ae2.chunk.js"
+    "static/css/main.834cbe97.chunk.css",
+    "static/js/main.8f8ec56e.chunk.js"
   ]
 }
